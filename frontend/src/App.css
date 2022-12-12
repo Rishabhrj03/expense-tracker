@@ -28,6 +28,23 @@
   color: #61dafb;
 }
 
+.hidden{
+  overflow: hidden;
+  box-shadow: 1px 1px 1px 1px black;
+}
+.hidden:hover .buttonPosition{
+  left : 20px;
+  transition: 0.3s ease-in-out;
+}
+
+.hidden:hover {
+  box-shadow: 1px 1px 1px 1px red;
+}
+.buttonPosition{
+  position: relative;
+  left : 45px;
+  bottom: 5px;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
