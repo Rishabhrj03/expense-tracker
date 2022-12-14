@@ -41,7 +41,6 @@ function ColorSchemesExample() {
             <Nav.Link href='#features'>Features</Nav.Link>
             <Nav.Link href='#pricing'>Pricing</Nav.Link>
           </Nav> */}
-          <ExpenseModel />
 
           <label htmlFor='file-upload' className='file-upload'>
             <div className='fileUploadButton'>

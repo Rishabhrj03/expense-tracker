@@ -3,12 +3,15 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import axios from 'axios';
-export default function Example() {
+import UilPlus from '@iconscout/react-unicons/icons/uil-plus';
+
+function ExpenseModal() {
   const [show, setShow] = useState(false);
   const [note, setNote] = useState('');
   const [price, setPrice] = useState(0);
   const [category, setCategory] = useState('other');
   const [transectionAt, setTransectionAt] = useState('');
+  const [bank, setBank] = useState('Paytm');
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const submit = (e) => {
@@ -45,8 +48,13 @@ export default function Example() {
   };
   return (
     <>
-      <Button variant='primary' onClick={handleShow}>
-        Add Note
+      <Button
+        variant='primary'
+        onClick={handleShow}
+        className='rounded-circle d-flex p-0 justify-content-center align-items-center'
+        style={{ width: '30px', height: '30px' }}
+      >
+        <UilPlus size='20' color='#fff' />
       </Button>
 
       <Modal show={show} onHide={handleClose}>
@@ -119,6 +127,25 @@ export default function Example() {
                 onChange={(e) => setTransectionAt(e.target.value)}
               />
             </Form.Group>
+            <Form.Group className='mb-3'>
+              <Form.Label>Payment Mode</Form.Label>
+              <Form.Select
+                name='bank'
+                value={bank}
+                onChange={(e) => setBank(e.target.value)}
+              >
+                <option value='paytm'>Paytm</option>
+                <option value='hdfc'>HDFC</option>
+                <option value='pnb'>Punjab National Bank</option>
+                <option value='axis'>Axis</option>
+                <option value='sbi'>State Bank of India</option>
+                <option value='uboi'>Union Bank of India</option>
+                <option value='bob'>Bank of Baroda</option>
+                <option value='boi'>Bank of India</option>
+                <option value='airtel'>Airtel Payments</option>
+              </Form.Select>
+            </Form.Group>
+
             <Modal.Footer>
               <Button variant='secondary' onClick={handleClose}>
                 Close
@@ -133,3 +160,4 @@ export default function Example() {
     </>
   );
 }
+export default ExpenseModal;

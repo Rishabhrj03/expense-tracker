@@ -1,16 +1,15 @@
-import Navbar from './components/Navbar';
-import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import './App.css';
+import './App.scss';
 import Sidebar from './components/Sidebar';
 import Lists from './components/Lists';
 
 function App() {
   return (
     <div className='App'>
-      <Navbar />
+      {/* <Navbar /> */}
       <Container>
         <Row>
           <Sidebar />
