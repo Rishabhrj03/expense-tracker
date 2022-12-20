@@ -5,6 +5,7 @@ import './App.css';
 import './App.scss';
 import Sidebar from './components/Sidebar';
 import Lists from './components/Lists';
+import RightSidebar from './components/RightSidebar';
 
 function App() {
   return (
@@ -14,9 +15,7 @@ function App() {
         <Row>
           <Sidebar />
           <Lists />
-          <Col xs={6} md={3}>
-            xs=6 md=4
-          </Col>
+          <RightSidebar />
         </Row>
       </Container>
     </div>
