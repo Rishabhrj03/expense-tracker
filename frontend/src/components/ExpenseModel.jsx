@@ -37,7 +37,7 @@ function ExpenseModal() {
     };
     axios({
       method: 'post',
-      url: `http://localhost:8000/note`,
+      url: `${process.env.REACT_APP_BASE_URL}/note`,
       data: bodyFormData,
       // headers: { 'Content-Type': 'multipart/form-data' },
     })

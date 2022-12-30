@@ -86,4 +86,5 @@ router.get('/yearlyGraphbyMonth', async (req, res) => {
     montlyExpense,
   });
 });
+
 module.exports = router;

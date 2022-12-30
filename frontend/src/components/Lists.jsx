@@ -11,7 +11,7 @@ export default () => {
   const [notes, setNotes] = useState([]);
   useEffect(() => {
     async function getNote() {
-      const result = await axios.get(`http://localhost:8000/note`);
+      const result = await axios.get(`${process.env.REACT_APP_BASE_URL}/note`);
       console.log(result);
       if (result.data.success) setNotes(result.data.result);
     }
